@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Formulario = ({cantidad, guardarCantidad, plazo, guardarPlazo}) => {
+    
+    // Definir el State
+    const [error, guardarError] = useState(false);
 
     // Luego de enviar el formulario
     const calcularPrestamo = (e) => {
@@ -8,7 +11,7 @@ const Formulario = ({cantidad, guardarCantidad, plazo, guardarPlazo}) => {
 
         // Validar el formulario
         if (cantidad === 0 || plazo === '') {
-            console.log('Todos los campos son obligatorios');
+            guardarError(true);
         }
 
         // Realizar la cotizacion
