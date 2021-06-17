@@ -6,6 +6,7 @@ function App() {
 
   // Definicion del State
   const [cantidad, guardarCantidad] = useState(0);
+  const [plazo, guardarPlazo] = useState(0);
   
   return (
     <Fragment>
@@ -17,6 +18,8 @@ function App() {
         <Formulario 
           cantidad={cantidad}
           guardarCantidad={guardarCantidad}
+          plazo={plazo}
+          guardarPlazo={guardarPlazo}
         />
       </div>
       
