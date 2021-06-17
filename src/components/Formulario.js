@@ -2,8 +2,20 @@ import React from 'react';
 
 const Formulario = ({cantidad, guardarCantidad, plazo, guardarPlazo}) => {
 
+    // Luego de enviar el formulario
+    const calcularPrestamo = (e) => {
+        e.preventDefault();
+
+        // Validar el formulario
+        if (cantidad === 0 || plazo === '') {
+            console.log('Todos los campos son obligatorios');
+        }
+
+        // Realizar la cotizacion
+    }
+
     return ( 
-        <form>
+        <form onSubmit={calcularPrestamo} >
             <div className="row">
                 <div>
                     <label>Cantidad Prestamo</label>
